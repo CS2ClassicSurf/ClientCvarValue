@@ -173,6 +173,10 @@ bool ClientCvarValue::QueryCvarValue(CPlayerSlot nSlot, const char* pszCvarName,
 	return false;
 }
 
+EXPORTDLL const char* Api_GetClientLanguage(int iSlot)
+{
+  return GetClientLanguage(iSlot);
+}
 const char* ClientCvarValue::GetClientLanguage(CPlayerSlot nSlot)
 {
 	if (nSlot.Get() >= 0 && nSlot.Get() < m_ClientCvarData.size())
@@ -182,11 +186,6 @@ const char* ClientCvarValue::GetClientLanguage(CPlayerSlot nSlot)
 	}
 
 	return nullptr;
-}
-
-EXPORTDLL const char* Api_GetClientLanguage(int iSlot)
-{
-  return GetClientLanguage(iSlot);
 }
 
 const char* ClientCvarValue::GetClientOS(CPlayerSlot nSlot)
