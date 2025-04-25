@@ -184,6 +184,11 @@ const char* ClientCvarValue::GetClientLanguage(CPlayerSlot nSlot)
 	return nullptr;
 }
 
+EXPORTDLL const char* Api_GetClientLanguage(int iSlot)
+{
+  return GetClientLanguage(iSlot);
+}
+
 const char* ClientCvarValue::GetClientOS(CPlayerSlot nSlot)
 {
 	if (nSlot.Get() >= 0 && nSlot.Get() < m_ClientCvarData.size())
