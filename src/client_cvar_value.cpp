@@ -13,7 +13,7 @@
  * In no event will the authors be held liable for any damages arising from
  * the use of this software. 
  */
-#define EXPORTDLL extern "C" DLL_PUBLIC
+
 #include "client_cvar_value.h"
 #include <networksystem/inetworkserializer.h>
 #include <networksystem/inetworkmessages.h>
